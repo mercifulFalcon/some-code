@@ -133,9 +133,20 @@ while True:
                     elif frm == 3 and to == 1:
                         print(f"{x * 1296} in\xb2")
                     elif frm == 3 and to == 2:
-                        pass
-                        
-                    
+                        print(f"{x * 9} ft\xb2")
+                    elif frm == 3 and to == 3:
+                        print(f"{x} yd\xb2")
+                    elif frm == 3 and to == 4:
+                        print(f"{x / 3098000} mi\xb2 ")
+                    elif frm == 3 and to == 5:
+                        print(f"{x * 836100} mm\xb2")    
+                    elif frm == 3 and to == 6:
+                        print(f"{x * 8361} cm\xb2")
+                    elif frm == 3 and to == 7:
+                        m2 = x / 1.196
+                        print("%.4f"  %m2 , "m\xb2")
+                    elif frm == 3 and to == 8:
+                        print(f"{x / 1196000} km\xb2")
         elif op == 3:
             pass
         
