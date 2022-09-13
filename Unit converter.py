@@ -132,7 +132,7 @@ while True:
                         print(f"{x / 10760000} km\xb2")
                     elif frm == 3 and to == 1:
                         print(f"{x * 1296} in\xb2")
-                        
+                        pass
                         
                     
         elif op == 3:
