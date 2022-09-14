@@ -17,8 +17,14 @@ while True:
                     
                     print("\nConvert from:\n1:degree\n2:radian\n3:minutes\n4:seconds\n5:quadrant")
                     frm = int(input("\nPlease enter an option 1-5:\n>>> "))
+                    if frm < 1 or frm > 5:
+                        print("Wrong choice, back to the main menu you go")
+                        continue
                     print("\nConvert to:\n1:degree\n2:radian\n3:minutes\n4:seconds\n5:quadrant")
                     to = int(input("\nPlease enter an option 1-5:\n>>> "))
+                    if to < 1 or to > 5:
+                        print("Wrong choice, back to the main menu you go")
+                        continue
                     if to < 1:
                         print("Wrong choice, back to the main menu you go")
                     elif  to > 5:
@@ -90,9 +96,15 @@ while True:
                     x = int(input("\nNumber: "))
                     print("\nConvert from:\n1:square inch (in²)\n2:square foot (ft²)\n3:square yard (yd²)\n4:square mile (mi²)\n5:square milimiter (mm²)\n6:square centimeter (cm²)\n7:square meter (m²)\n8:square kilometer (km²)")
                     
-                    frm = int(input("\nSelect an option:\n>>> "))  
+                    frm = int(input("\nSelect an option:\n>>> ")) 
+                    if frm < 1 or frm > 5:
+                        print("Wrong choice, back to the main menu you go")
+                        continue 
                     print("\nConvert to:\n1-square inch (in²)\n2:square foot (ft²)\n3:square yard (yd²)\n4:square mile (mi²)\n5:square milimiter (mm²)\n6:square centimeter (cm²)\n7:square meter (m²)\n8:square kilometer (km²)")
                     to = int(input("\nSelect an option:\n>>> "))
+                    if to < 1 or to > 5:
+                        print("Wrong choice, back to the main menu you go")
+                        continue
                     if frm == 1 and to == 1:
                         print(f"{x} in²")
                     elif frm == 1 and to == 2:
@@ -147,17 +159,94 @@ while True:
                         print("%.4f"  %m2 , "m\xb2")
                     elif frm == 3 and to == 8:
                         print(f"{x / 1196000} km\xb2")
+                    elif frm == 4 and to == 1:
+                        print(f"{x * 4014000000} in\xb2")
+                    elif frm == 4 and to == 2:
+                        print(f"{x * 278800000} ft\xb2")
+                    elif frm == 4 and to == 3:
+                        print(f"{x * 3098000} yd\xb2")
+                    elif frm == 4 and to == 4:
+                        print(f"{x} mi\xb2")
+                    elif frm == 4 and to == 5:
+                        print(f"{x * 2590000000000} mm\xb2")
+                    elif frm == 4 and to == 6:
+                        print(f"{x * 25900000000} cm\xb2")
+                    elif frm == 4 and to == 7:
+                        print(f"{x * 2590000} m\xb2")
+                    elif frm == 4 and to == 8:
+                        print(f"{x * 2.59} km\xb2")
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
         elif op == 3:
-            pass
+            x = float(input("\nNumber: "))
+            print("\nConvert from:\n1:feet (ft)\n2:centimeter (cm)")
+                    
+            frm = int(input("\nSelect an option:\n>>> ")) 
+            if frm < 1 or frm > 2:
+                print("Wrong choice, back to the main menu you go")
+                continue 
+            print("\nConvert to:\n1:feet (ft))\n2:centimeter (cm)")
+            to = int(input("\nSelect an option:\n>>> "))
+            if to < 1 or to > 2:
+                print("Wrong choice, back to the main menu you go")
+                continue
+            elif frm == 1 and to == 1:
+                print(f"{x} ft")
+            elif frm == 1 and to == 2:
+                print(f"{x * 30.48} cm")
+            elif frm == 2 and to == 1:
+                print(f"{x /  30.48} ft")
+            elif frm == 2 and to == 2:
+                print(f"{x} cm")
+            
         
         elif op == 4:
             pass
-        
-        elif op == 5:
-            pass
-        
-        elif op == 6:
-            pass            
+                   
                         
         elif op == 0:
             print("Goodbye")
