@@ -13,7 +13,7 @@ while True:
         
             
         elif op == 1:
-                    x = int(input("\nNumber: "))
+                    x = float(input("\nNumber: "))
                     
                     print("\nConvert from:\n1:degree\n2:radian\n3:minutes\n4:seconds\n5:quadrant")
                     frm = int(input("\nPlease enter an option 1-5:\n>>> "))
@@ -32,50 +32,40 @@ while True:
                     if frm == 1 and to == 1:
                         print(f"{x}°")
                     elif frm == 1 and to == 2:
-                        value = x / 57.3
-                        print("%.4f" % value , "rad")
+                        print(f"{round(x / 57.3, 2)} rad")
                     elif frm == 1 and to == 3:
                         print(f"{x * 60}'")
                     elif frm == 1 and to == 4:
                         print(f'{x * 3600}"') 
                     elif frm == 1 and to == 5:
-                        val = x / 90
-                        print("%.4f" % val , "quadrant")
+                        print(f"{round(x / 90, 2)} quadrant")
                     elif frm == 2 and to == 1:
-                        res = x * 57.3
-                        print("%.4f" %res, "°")
+                        print(f"{round(x * 57.3, 2)}°")
                     elif frm == 2 and to == 2:
                         print(f"{x} rad")
                     elif frm == 2 and to == 3:
-                        prod = x * 3438
-                        print("%4.f" % prod , "'" )
+                        print(f"{x * 3438}'")
                     elif frm == 2 and to == 4:
                         print(f"{x * 206300}")
                     elif frm == 2 and to == 5:
                         quad = x / 1.571
-                        print("%.4f" % quad , "quadrant")
-                        
+                        print(f"{round(x / 1.571 , 2)} quadrant")
                     elif frm == 3 and to == 1:
-                        min = x / 60
-                        print("%.4f" % min, "°" )
+                        print(f"{round(x / 60, 2)}°" )
                     elif frm == 3 and to == 2:
-                        ans = x / 3438
-                        print("%.4f" % ans , "rad")
+                        print(f"{round(x / 3438, 2)} rad")
                     elif frm == 3 and to == 3:
                         print(f"{x}'")
                     elif frm == 3 and to == 4:
                         print(f'{x * 60}"')  
                     elif frm == 3 and to == 5:
-                        rta = x / 5400
-                        print("%.4f" % rta , "quadrant")
+                        print(f"{round(x / 5400, 2)} quadrant")
                     elif frm == 4 and to == 1:
-                        sec = x / 3600
-                        print("%.4f" % sec , "º")
+                        print(f"{round(x / 3600, 2)}º")
                     elif frm == 4 and to == 2:
                         print(f"{x / 206300} rad")
                     elif frm == 4 and to == 3:
-                        sam = x / 60
-                        print("%.4f" % sam , "'")
+                        print(f"{round(x / 60, 2)}'")
                     elif frm == 4 and to == 4:
                         print(f'{x}"')        
                     elif frm == 4 and to == 5:
@@ -83,8 +73,7 @@ while True:
                     elif frm == 5 and to == 1:
                         print(f"{x * 90}º")
                     elif frm == 5 and to == 2:
-                        radi = x * 1.5708
-                        print("%.4f" % radi , "rad") 
+                        print(f"{round(x * 1.5708, 2)} rad") 
                     elif frm == 5 and to == 3:
                         print(f"{x * 5400}'")
                     elif frm == 5 and to == 4:
@@ -97,22 +86,20 @@ while True:
                     print("\nConvert from:\n1:square inch (in²)\n2:square foot (ft²)\n3:square yard (yd²)\n4:square mile (mi²)\n5:square milimiter (mm²)\n6:square centimeter (cm²)\n7:square meter (m²)\n8:square kilometer (km²)")
                     
                     frm = int(input("\nSelect an option:\n>>> ")) 
-                    if frm < 1 or frm > 5:
+                    if frm < 1 or frm > 8:
                         print("Wrong choice, back to the main menu you go")
                         continue 
                     print("\nConvert to:\n1-square inch (in²)\n2:square foot (ft²)\n3:square yard (yd²)\n4:square mile (mi²)\n5:square milimiter (mm²)\n6:square centimeter (cm²)\n7:square meter (m²)\n8:square kilometer (km²)")
                     to = int(input("\nSelect an option:\n>>> "))
-                    if to < 1 or to > 5:
+                    if to < 1 or to > 8:
                         print("Wrong choice, back to the main menu you go")
                         continue
                     if frm == 1 and to == 1:
                         print(f"{x} in²")
                     elif frm == 1 and to == 2:
-                        ft = x / 144
-                        print("%.4f" %ft ,"ft²" )
+                        print(f"{round(x / 144, 2)} ft\xb2" )
                     elif frm == 1 and to == 3:
-                        yd = x / 1296
-                        print("%.4f" %yd , "yd\xb2")
+                        print(f"{round(x /1296, 2)} yd\xb2")
                     elif frm == 1 and to == 4:
                         print(f"{x /4014000000} mi\xb2")
                     elif frm == 1 and to == 5:
@@ -121,7 +108,7 @@ while True:
                         print(f"{x * 6.452} cm\xb2")
                     elif frm == 1 and to == 7:
                         met = x / 1550
-                        print("%.4f" % met , "m\xb2") 
+                        print(f"{round(x /1550, 2)} m\xb2") 
                     elif frm == 1 and to == 8:
                         print(f"{x /1550000000} km\xb2 ")
                     elif frm == 2 and to == 1:
@@ -129,8 +116,7 @@ while True:
                     elif frm == 2 and to == 2:
                         print(f"{x} in\xb2")
                     elif frm == 2 and to == 3:
-                        yd = x / 9
-                        print("%.4f" % yd , "yd\xb2")
+                        print(f"{round(x / 9, 2)} yd\xb2")
                     elif frm == 2 and to == 4:
                         print(f"{x / 27880000} mi\xb2")
                     elif frm == 2 and to == 5:
@@ -138,8 +124,7 @@ while True:
                     elif frm == 2 and to == 6:
                         print(f"{x * 929.0304} cm\xb2 ")
                     elif frm == 2 and to == 7:
-                        m = x / 10.76
-                        print("%.4f" %m , "m\xb2")
+                        print(f"{round(x / 10.76, 2)} m\xb2")
                     elif frm == 2 and to == 8:
                         print(f"{x / 10760000} km\xb2")
                     elif frm == 3 and to == 1:
@@ -155,8 +140,7 @@ while True:
                     elif frm == 3 and to == 6:
                         print(f"{x * 8361} cm\xb2")
                     elif frm == 3 and to == 7:
-                        m2 = x / 1.196
-                        print("%.4f"  %m2 , "m\xb2")
+                        print(f"{round(x / 1.196, 2)} m\xb2")
                     elif frm == 3 and to == 8:
                         print(f"{x / 1196000} km\xb2")
                     elif frm == 4 and to == 1:
@@ -175,6 +159,54 @@ while True:
                         print(f"{x * 2590000} m\xb2")
                     elif frm == 4 and to == 8:
                         print(f"{x * 2.59} km\xb2")
+                    elif frm == 5 and to == 1:
+                        print(f"{round(x / 645.2, 4)} in\xb2")
+                    elif frm == 5 and to == 2:
+                        print(f"{x / 92900} ft\xb2")
+                    elif frm == 5 and to == 3:
+                        print(f"{x /836100} yd\xb2")
+                    elif frm == 5 and to == 4:
+                        print(f"{x / 2590000000000} mi\xb2")
+                    elif frm == 5 and to == 5:
+                        print(f"{x} mm\xb2")
+                    elif frm == 5 and to == 6:
+                        print(f"{round(x / 100, 2)} cm\xb2")
+                    elif frm == 5 and to == 7:
+                        print(f"{x / 1000000} m\xb2")
+                    elif frm == 5 and to == 8:
+                        print(f"{x /1000000000000} km\xb2")
+                    elif frm == 6 and to == 1:
+                        print(f"{round(x / 6.452, 2)} in\xb2")
+                    elif frm == 6 and to == 2:
+                        print(f"{round(x / 929, 2)} ft\xb2")
+                    elif frm == 6 and to == 3:
+                        print(f"{round(x / 8361, 4)} yd\xb2")
+                    elif frm == 6 and to == 4:
+                        print(f"{x / 25900000000} mi\xb2 ")
+                    elif frm == 6 and to == 5:
+                        print(f"{x * 100} mm\xb2")
+                    elif frm == 6 and to == 6:
+                        print(f"{x} cm\xb2")
+                    elif frm == 6 and to == 7:
+                        print(f"{round(x / 10000, 4)} m\xb2")
+                    elif frm == 6 and to == 8:
+                        print(f"{x / 10000000000} km\xb2")
+                    elif frm == 7 and to == 1:
+                        print(f"{round(x * 1550, 3)} in\xb2")
+                    elif frm == 7 and to == 2:
+                        print(f"{round(x * 10.76, 2)} ft\xb2")
+                    elif frm == 7 and to == 3:
+                        print(f"{round(x * 1.196, 2)} yd\xb2")
+                    elif frm == 7 and to == 4:
+                        print(f"{x / 2590000} mi\xb2")
+                    elif frm == 7 and to == 5:
+                        print(f"{x * 1000000} mm\xb2")
+                    elif frm == 7 and to == 6:
+                        print(f"{x * 100000} cm\xb2") 
+                    elif frm == 7 and to == 7:
+                        print(f"{x} m\xb2")
+                    elif frm == 7 and to == 8:
+                        print(f"{x / 1000000} km\xb2")
                         
                         
                         
