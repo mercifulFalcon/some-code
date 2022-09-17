@@ -207,52 +207,22 @@ while True:
                         print(f"{x} m\xb2")
                     elif frm == 7 and to == 8:
                         print(f"{x / 1000000} km\xb2")
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                    elif frm == 8 and to == 1:
+                        print(f"{x / 1550000000} in\xb2")
+                    elif frm == 8 and to == 2:
+                        print(f"{x * 10760000} ft\xb2")
+                    elif frm == 8 and to == 3:
+                        print(f"{x * 1196000} yd\xb2")
+                    elif frm == 8 and to == 4:
+                        print(f"{round(x / 2.59, 2)} mi\xb2")
+                    elif frm == 8 and to == 5:
+                        print(f"{x * 1000000000000} mm\xb2")
+                    elif frm == 8 and to == 6:
+                        print(f"{x * 10000000000} cm\xb2")
+                    elif frm == 8 and to == 7:
+                        print(f"{x * 1000000} m\xb2")
+                    elif frm == 8 and to == 8:
+                        print(f"{x} km\xb2")
         elif op == 3:
             x = float(input("\nNumber: "))
             print("\nConvert from:\n1:feet (ft)\n2:centimeter (cm)")
@@ -274,8 +244,6 @@ while True:
                 print(f"{x /  30.48} ft")
             elif frm == 2 and to == 2:
                 print(f"{x} cm")
-            
-        
         elif op == 4:
             pass
                    
