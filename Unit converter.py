@@ -1,5 +1,3 @@
-
-
 print(" --------------------------------Unit converter-------------------------------- ")
 
 while True:
@@ -83,14 +81,17 @@ while True:
                         
         elif op == 2:
                     x = int(input("\nNumber: "))
+                    
                     print("\nConvert from:\n1:square inch (in²)\n2:square foot (ft²)\n3:square yard (yd²)\n4:square mile (mi²)\n5:square milimiter (mm²)\n6:square centimeter (cm²)\n7:square meter (m²)\n8:square kilometer (km²)")
                     
                     frm = int(input("\nSelect an option:\n>>> ")) 
                     if frm < 1 or frm > 8:
                         print("Wrong choice, back to the main menu you go")
                         continue 
+                    
                     print("\nConvert to:\n1-square inch (in²)\n2:square foot (ft²)\n3:square yard (yd²)\n4:square mile (mi²)\n5:square milimiter (mm²)\n6:square centimeter (cm²)\n7:square meter (m²)\n8:square kilometer (km²)")
                     to = int(input("\nSelect an option:\n>>> "))
+                    
                     if to < 1 or to > 8:
                         print("Wrong choice, back to the main menu you go")
                         continue
@@ -223,19 +224,26 @@ while True:
                         print(f"{x * 1000000} m\xb2")
                     elif frm == 8 and to == 8:
                         print(f"{x} km\xb2")
+                        
         elif op == 3:
             x = float(input("\nNumber: "))
+            
             print("\nConvert from:\n1:feet (ft)\n2:centimeter (cm)")
-                    
+            
             frm = int(input("\nSelect an option:\n>>> ")) 
+            
             if frm < 1 or frm > 2:
                 print("Wrong choice, back to the main menu you go")
                 continue 
+            
             print("\nConvert to:\n1:feet (ft))\n2:centimeter (cm)")
             to = int(input("\nSelect an option:\n>>> "))
+            
             if to < 1 or to > 2:
+                
                 print("Wrong choice, back to the main menu you go")
                 continue
+            
             elif frm == 1 and to == 1:
                 print(f"{x} ft")
             elif frm == 1 and to == 2:
@@ -244,13 +252,42 @@ while True:
                 print(f"{x /  30.48} ft")
             elif frm == 2 and to == 2:
                 print(f"{x} cm")
+                
         elif op == 4:
-            pass
-                   
-                        
+            x = float(input("\nTemperature: "))
+            print("\nConvert from:\n1:celcius (\xb0c)\n2:fahrenheit (\xb0f)\n3:kelvin (k)")
+            frm = int(input("\nSelect an option:\n>>> ")) 
+            if frm < 1 or frm > 3:
+                print("Wrong choice, back to the main menu you go")
+                continue 
+            print("\nConvert to\n1:celcius (\xb0c)\n2:fahrenheit (\xb0f)\n3:kelvin (k)")
+            to = int(input("\nSelect an option:\n>>> "))
+            if to < 1 or to > 3:
+                print("Wrong choice, back to the main menu you go")
+                continue
+            elif frm == 1 and to == 1:
+                print(f"{x} \xb0C")
+            elif frm == 1 and to == 2:
+                print(f"{round(x * 9/5+32, 2)} \xb0F")
+            elif frm == 1 and to == 3:
+                print(f"{round(x + 273.15, 2)} K")
+            elif frm == 2 and to == 1:
+                print(f"{round((x - 32) * (5/9), 2)} \xb0C")
+            elif frm == 2 and to  == 2:
+                print(f"{x} \xb0F")
+            elif frm == 2 and to == 3:
+                print(f"{round((x + 459.67) * (5/9), 2)} K")
+            elif frm == 3 and to == 1:
+                print(f"{x - 273.15} \xb0C")
+            elif frm == 3 and to == 2:
+                print(f"{round((9/5) * (x - 273.15) + 32, 2)} \xb0F")
+            elif frm == 3 and to == 3:
+                print(f"{x} K")
+                
         elif op == 0:
             print("Goodbye")
             break
+        
     except Exception:
             print("Please enter a number or 0 to exit")
         
