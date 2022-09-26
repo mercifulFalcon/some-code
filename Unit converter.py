@@ -1,32 +1,41 @@
 print(" --------------------------------Unit converter-------------------------------- ")
 
+def msg():
+    print("Wrong choice, back to the main menu you go")
+
+
+
+
+
+
+
 while True:
     print()
     print("\nMain menu\n\n1:Angle\n2:Area\n3:Height\n4:Temperature\n0:Exit")
     try:
         op = int(input("\nPlease enter an option:\n>>> "))
         
-        if op < 0 or op > 5:
+        if op < 0 or op > 4:
                 print("Invalid number, try again")
         
             
         elif op == 1:
-                    x = float(input("\nNumber: "))
+                    x = float(input("\nValue to be converted: "))
                     
                     print("\nConvert from:\n1:degree\n2:radian\n3:minutes\n4:seconds\n5:quadrant")
                     frm = int(input("\nPlease enter an option 1-5:\n>>> "))
                     if frm < 1 or frm > 5:
-                        print("Wrong choice, back to the main menu you go")
+                        msg()
                         continue
                     print("\nConvert to:\n1:degree\n2:radian\n3:minutes\n4:seconds\n5:quadrant")
                     to = int(input("\nPlease enter an option 1-5:\n>>> "))
                     if to < 1 or to > 5:
-                        print("Wrong choice, back to the main menu you go")
+                        msg()
                         continue
                     if to < 1:
-                        print("Wrong choice, back to the main menu you go")
+                        msg()
                     elif  to > 5:
-                        print("Wrong choice, back to the main menu you go")
+                        msg()
                     if frm == 1 and to == 1:
                         print(f"{x}°")
                     elif frm == 1 and to == 2:
@@ -80,20 +89,20 @@ while True:
                         print(f"{x} quadrant")
                         
         elif op == 2:
-                    x = int(input("\nNumber: "))
+                    x = int(input("\nValue to be converted: "))
                     
                     print("\nConvert from:\n1:square inch (in²)\n2:square foot (ft²)\n3:square yard (yd²)\n4:square mile (mi²)\n5:square milimiter (mm²)\n6:square centimeter (cm²)\n7:square meter (m²)\n8:square kilometer (km²)")
                     
                     frm = int(input("\nSelect an option:\n>>> ")) 
                     if frm < 1 or frm > 8:
-                        print("Wrong choice, back to the main menu you go")
+                        msg()
                         continue 
                     
                     print("\nConvert to:\n1-square inch (in²)\n2:square foot (ft²)\n3:square yard (yd²)\n4:square mile (mi²)\n5:square milimiter (mm²)\n6:square centimeter (cm²)\n7:square meter (m²)\n8:square kilometer (km²)")
                     to = int(input("\nSelect an option:\n>>> "))
                     
                     if to < 1 or to > 8:
-                        print("Wrong choice, back to the main menu you go")
+                        msg()
                         continue
                     if frm == 1 and to == 1:
                         print(f"{x} in²")
@@ -226,22 +235,21 @@ while True:
                         print(f"{x} km\xb2")
                         
         elif op == 3:
-            x = float(input("\nNumber: "))
+            x = float(input("\nValue to be converted: "))
             
             print("\nConvert from:\n1:feet (ft)\n2:centimeter (cm)")
             
             frm = int(input("\nSelect an option:\n>>> ")) 
             
             if frm < 1 or frm > 2:
-                print("Wrong choice, back to the main menu you go")
+                msg()
                 continue 
             
             print("\nConvert to:\n1:feet (ft))\n2:centimeter (cm)")
             to = int(input("\nSelect an option:\n>>> "))
             
             if to < 1 or to > 2:
-                
-                print("Wrong choice, back to the main menu you go")
+                msg()
                 continue
             
             elif frm == 1 and to == 1:
@@ -258,12 +266,12 @@ while True:
             print("\nConvert from:\n1:celcius (\xb0c)\n2:fahrenheit (\xb0f)\n3:kelvin (k)")
             frm = int(input("\nSelect an option:\n>>> ")) 
             if frm < 1 or frm > 3:
-                print("Wrong choice, back to the main menu you go")
+                msg()
                 continue 
             print("\nConvert to\n1:celcius (\xb0c)\n2:fahrenheit (\xb0f)\n3:kelvin (k)")
             to = int(input("\nSelect an option:\n>>> "))
             if to < 1 or to > 3:
-                print("Wrong choice, back to the main menu you go")
+                msg()
                 continue
             elif frm == 1 and to == 1:
                 print(f"{x} \xb0C")
