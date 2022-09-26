@@ -1,14 +1,8 @@
 print(" --------------------------------Unit converter-------------------------------- ")
-
+#------------------------------------------------------
 def msg():
     print("Wrong choice, back to the main menu you go")
-
-
-
-
-
-
-
+#------------------------------------------------------
 while True:
     print()
     print("\nMain menu\n\n1:Angle\n2:Area\n3:Height\n4:Temperature\n0:Exit")
